@@ -38,7 +38,7 @@ Clarity does not have native `struct` or `enum` types like Solidity, but you can
 ### Tuples (Struct-like)
 Tuples are fixed key-value pairs. They are used to represent structured data.
 ```Clojure
-  (define-map users (principal) (tuple (name (string-ascii 32)) (age uint)))
+  (define-map users {owner: principal} {name:(string-ascii 100), age: uint})
 ```
 
 Accessing tuple fields:
